@@ -3,7 +3,11 @@
 public class SnekLauncher {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		
+		//Create the display
+		int width = 500;
+		int height = 500;
+		Display display = new Display(width, height);
 
 	}
 
