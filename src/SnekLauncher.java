@@ -7,7 +7,7 @@ public class SnekLauncher {
 		//Create the display
 		int width = 500;
 		int height = 500;
-		Display display = new Display(width, height);
+		Display titleScreen = new Display(width, height);
 
 	}
 
