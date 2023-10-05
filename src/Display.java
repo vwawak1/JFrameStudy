@@ -1,5 +1,7 @@
 //JMJ
 import java.awt.Color;
+import java.awt.Font;
+
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
@@ -9,7 +11,10 @@ public class Display extends JFrame {
 	public Display(int width, int height) {
 		
 		//Add title text
-		JLabel titleTxt = createLabel("Snake Game!");
+		JLabel titleTxt = createLabel("Generic Snake Game");
+		titleTxt.setFont(new Font("Serif", Font.PLAIN, 24));
+		titleTxt.setVerticalAlignment(JLabel.TOP);
+		titleTxt.setHorizontalAlignment(JLabel.CENTER);
 		//titleTxt.setForeground));
 		
 		//Display Data
