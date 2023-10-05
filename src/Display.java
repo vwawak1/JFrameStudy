@@ -1,16 +1,20 @@
 //JMJ
 import java.awt.Color;
 import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
-public class Display extends JFrame {
+public class Display extends JFrame implements ActionListener{
 	
 	private int width;
 	private int height;
+	JButton startBtn = new JButton();
+
 	
 	//Constructor for the display
 	public Display(int width, int height) {
@@ -45,10 +49,10 @@ public class Display extends JFrame {
 		titleTxt.setVerticalAlignment(JLabel.TOP);
 		titleTxt.setHorizontalAlignment(JLabel.CENTER);
 		
-		//Create Start Button
-		JButton startBtn = new JButton();
-		startBtn.setBounds(width/2-35,height/2-10,70,20);
-		startBtn.setText("Start");
+		//Edit Start Button
+		this.startBtn.setBounds(width/2-35,height/2-10,70,20);
+		this.startBtn.setText("Start");
+		this.startBtn.addActionListener(this);
 		
 		//Set background color and bounds of panel
 		screen.setBackground(new Color(29, 133, 41));
@@ -56,10 +60,19 @@ public class Display extends JFrame {
 		
 		//Add text and button
 		screen.add(titleTxt);
-		screen.add(startBtn);
+		screen.add(this.startBtn);
 		
 		//Return Screen
 		return screen;
 	}
+	
+	//Add event listener
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		if(e.getSource() == this.startBtn) {
+			System.out.println("I've been pressed!");
+		}
+	}
+	
 	
 }
