@@ -1,6 +1,6 @@
 //JMJ
 //27 Sept 2023
-public class SnekLauncher {
+public class Main {
 
 	public static void main(String[] args) {
 		
@@ -8,7 +8,12 @@ public class SnekLauncher {
 		int width = 500;
 		int height = 500;
 		Display titleScreen = new Display(width, height);
-
+		
+		/*
+		Bug List
+		- On first start, title label does not load
+		
+		*/
 	}
 
 }

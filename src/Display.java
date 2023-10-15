@@ -39,9 +39,22 @@ public class Display extends JFrame implements ActionListener{
 		return new JLabel(txt);
 	}
 	
+	
+	//Title Screen Method
 	private JPanel titleScreen() {
 		//Create JPanel component
 		JPanel screen = new JPanel();
+		
+		//Edit Start Button
+		this.startBtn.setBounds(width/2-35,height/2-10,70,20);
+		this.startBtn.setText("Start");
+		this.startBtn.addActionListener(this);
+		this.startBtn.setHorizontalTextPosition(JButton.CENTER);
+		this.startBtn.setVerticalAlignment(JButton.BOTTOM);
+		this.startBtn.setFocusable(false);
+		
+		//Add button
+		screen.add(this.startBtn);
 		
 		//Create title text
 		JLabel titleTxt = createLabel("Generic Snake Game");
@@ -49,18 +62,12 @@ public class Display extends JFrame implements ActionListener{
 		titleTxt.setVerticalAlignment(JLabel.TOP);
 		titleTxt.setHorizontalAlignment(JLabel.CENTER);
 		
-		//Edit Start Button
-		this.startBtn.setBounds(width/2-35,height/2-10,70,20);
-		this.startBtn.setText("Start");
-		this.startBtn.addActionListener(this);
-		
 		//Set background color and bounds of panel
 		screen.setBackground(new Color(29, 133, 41));
 		screen.setBounds(0,0,this.width,this.height);
 		
-		//Add text and button
+		//Add text
 		screen.add(titleTxt);
-		screen.add(this.startBtn);
 		
 		//Return Screen
 		return screen;
